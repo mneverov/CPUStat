@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  cadvisor:
+    image: gcr.io/google-containers/cadvisor:latest
+    container_name: cadvisor
+    volumes:
+    - /:/rootfs:ro
+    - /var/run:/var/run:rw
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+    ports:
+    - 8080:8080
+    depends_on:
+    - metrics
+
+  metrics:
+    build: .
+    container_name: metrics
+    restart: always
