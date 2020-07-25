@@ -197,7 +197,7 @@ user 133574
 system 18070
 ```
 
-From [docker dock](https://docs.docker.com/config/containers/runmetrics/)
+From [docker docs](https://docs.docker.com/config/containers/runmetrics/)
 ```
 For each container, a pseudo-file cpuacct.stat contains the CPU usage accumulated by the processes of the container,
 broken down into user and system time. The distinction is:
